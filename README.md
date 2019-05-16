@@ -30,3 +30,33 @@
 | impact service joueur        | server.is.impact.player            | Si le joueur qui a marqué le point était celui qui a servi                                                | bool                                                |
 | Catégorie tir                | outcome                            | Catégorie du tir gagnant                                                                                  | W : gagnant, FE : Erreur forcé, UE : Erreur non forcé |
 | id                           | id                                 | id unique de 10 caractères                                                                                | char                                                |
+
+Trucs chelous ( `describe()` ) :
+* Homme
+	* net.clearance : 12 max
+	* distance.from.sideline : 16 max
+	* opponent.depth : 20 max
+	* opponent.distance.from.center : 13 max
+* Femme
+	* net.clearance : 6 max
+	* distance.from.sideline (?) : 12 max
+	* opponent.depth (?) : 17 max
+
+Data représentable :
+* Basic
+	* Rally
+	* Serve
+
+Data aggrégable :
+* **hitpoint / outcome** ( est ce que la manière dont le dernier coup a été joué ( coup droit / revers ) est corrélé avec la catég gagnante ?
+* **speed / previous.speed** ( est ce que la difference de vitesse est impactante ? )
+* **same.side / hitpoint** ( est ce que le fait que les joueurs soient du même coté va impacter la facon dont le coup est joué ? + voir données cohérentes )
+* Où le joueur gagnant est-il situé sur le terrain ? Son positionnement a-t-il un impact sur la victoire ?
+	* **player.impact.depth** ( gagnant est-il loin/près du filet au tir du dernier coup ? )
+	* **player.impact.distance.from.center** ( gagnant est-il loin/près de la ligne centrale au tir du dernier coup ? )
+* Où le joueur perdant est-il situé sur le terrain ? Son positionnement a-t-il un impact sur la défaite ?
+	* **opponent.depth** ( perdant est-il loin/près du filet au tir de l'avant dernier coup ? )
+	* **opponent.distance.from.center** ( perdant est-il loin/près de la ligne centrale au tir de l'avant dernier coup ? )
+* Lorsque faute ( direct / indirect ) , où était la balle lors du dernier coup ( en dehors de la ligne de touche / au dela du fond de cours ? )
+	* **outside.sideline / outcome**
+	* **outside.baseline / outcome**
