@@ -46,6 +46,9 @@ Data représentable :
 * Basic
 	* Rally
 	* Serve
+	* hitpoint (countplot)
+	* outcome (countplot)
+	*
 
 Data aggrégable :
 * **hitpoint / outcome** ( est ce que la manière dont le dernier coup a été joué ( coup droit / revers ) est corrélé avec la catég gagnante ?
@@ -58,5 +61,6 @@ Data aggrégable :
 	* **opponent.depth** ( perdant est-il loin/près du filet au tir de l'avant dernier coup ? )
 	* **opponent.distance.from.center** ( perdant est-il loin/près de la ligne centrale au tir de l'avant dernier coup ? )
 * Lorsque faute ( direct / indirect ) , où était la balle lors du dernier coup ( en dehors de la ligne de touche / au dela du fond de cours ? )
-	* **outside.sideline / outcome**
+	* **outside.sideline / outcome** 
 	* **outside.baseline / outcome**
+* Corrélation entre vitesse du dernier coup gagnant & sa catégorie **speed/outcome**
